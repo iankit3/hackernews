@@ -14,15 +14,15 @@ app .controller("newsController",['$scope','$http', function($scope,$http){
 
   $http({
      method:'GET',
-     url:'http://hacker-news.firebaseio.com/v0/topstories.json?print=pretty'
+     url:'http://hacker-news.firebaseio.com/v0/topstories.json'
   }).success(function(data){
     console.log(data);
-    data = data.splice(0,10);
+    data = data.splice(0,20);
     console.log(data);
     data.forEach(function(e,i){
           $http({
              method:'GET',
-             url:'https://hacker-news.firebaseio.com/v0/item/'+ e +'.json?print=pretty'
+             url:'https://hacker-news.firebaseio.com/v0/item/'+ e +'.json'
            }).success(function(d){
                ($scope.myData).push(d);
              })
