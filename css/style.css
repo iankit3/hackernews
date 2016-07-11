@@ -3,8 +3,7 @@ body{
 }
 .full{
     display:inline-block;
-    width:75%;
-    margin-left:5%;
+    width:100%;
 }
 
 .each{
@@ -32,7 +31,7 @@ body{
 }
 
 .each-head{
-    width:200px;
+    width:20%;
     padding-left:5px;
     padding-right:5px;
     display:inline-block; 
